@@ -44,3 +44,4 @@ if __name__ == "__main__":
     ventana = tk.Tk()
     app = ProyectoClicker(ventana)
     ventana.mainloop()
+    print("¡Gracias por jugar!")
