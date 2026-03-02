@@ -1,0 +1,57 @@
+# Mas usados
+git init                # Inicializa un nuevo repositorio Git en el directorio actual
+git status              # Muestra el estado actual del repositorio
+git add .               # Añade todos los archivos modificados al área de preparación
+git commit -m "Mensaje" # Realiza una confirmación con un mensaje descriptivo
+git remote add origin URL # Añade un repositorio remoto
+git clone URL             # Clona un repositorio remoto en el directorio local
+
+
+# Inicialización y configuración
+git init                # Inicializa un nuevo repositorio Git en el directorio actual
+git config --global user.name "Tu Nombre"    # Configura el nombre de usuario global
+git config --global user.email "tu@email.com" # Configura el correo electrónico global
+
+# Estado y seguimiento de archivos
+git status              # Muestra el estado actual del repositorio
+git add archivo.txt     # Añade un archivo específico al área de preparación (staging)
+git add .               # Añade todos los archivos modificados al área de preparación
+git rm archivo.txt      # Elimina un archivo del repositorio y del sistema de archivos
+
+# Confirmaciones (commits)
+git commit -m "Mensaje" # Realiza una confirmación con un mensaje descriptivo
+git commit -am "Mensaje" # Añade y confirma cambios en archivos ya rastreados
+
+# Historial y diferencias
+git log                 # Muestra el historial de confirmaciones
+git log --oneline       # Muestra el historial en una sola línea por confirmación
+git diff                # Muestra las diferencias entre archivos modificados y el último commit
+
+# Ramas (branches)
+git branch              # Lista las ramas disponibles
+git branch nueva-rama   # Crea una nueva rama
+git checkout nueva-rama # Cambia a una rama específica
+git merge rama          # Fusiona una rama en la rama actual
+
+# Repositorios remotos
+git remote add origin URL # Añade un repositorio remoto
+git push origin master    # Envía los cambios al repositorio remoto
+git pull origin master    # Descarga y fusiona cambios del repositorio remoto
+
+# Revertir y resetear
+git reset archivo.txt     # Quita un archivo del área de preparación
+git reset --hard HEAD     # Revierte el repositorio al último commit, descartando cambios
+git revert <commit>       # Crea un nuevo commit que revierte los cambios de uno anterior
+
+# Etiquetas (tags)
+git tag                   # Lista todas las etiquetas
+git tag -a v1.0 -m "Versión 1.0" # Crea una etiqueta anotada
+git show v1.0             # Muestra información sobre una etiqueta
+
+# Stash (guardar cambios temporalmente)
+git stash                 # Guarda temporalmente los cambios no confirmados
+git stash apply           # Aplica los cambios guardados con stash
+git stash list            # Lista los cambios guardados con stash
+
+# Clonación
+git clone URL             # Clona un repositorio remoto en el directorio local

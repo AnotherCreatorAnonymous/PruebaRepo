@@ -1,0 +1,46 @@
+import tkinter as tk
+from tkinter import messagebox
+
+class ProyectoClicker:
+    def __init__(self, root):
+        self.root = root
+        self.root.title("Mi Proyecto Python")
+        self.root.geometry("300x250")
+        
+        # Variables del juego
+        self.contador = 0
+        
+        # 1. Mensaje principal
+        self.label_titulo = tk.Label(root, text="Esto es su proyecto", font=("Arial", 14, "bold"))
+        self.label_titulo.pack(pady=10)
+        
+        # 2. Pantalla de puntaje
+        self.label_puntos = tk.Label(root, text=f"Clicks: {self.contador}", font=("Arial", 12))
+        self.label_puntos.pack(pady=10)
+        
+        # 3. Botón de click
+        self.boton_click = tk.Button(root, text="¡Haz Click!", command=self.sumar_click, 
+                                     bg="#4CAF50", fg="white", width=15, height=2)
+        self.boton_click.pack(pady=5)
+        
+        # 4. Botón de reinicio
+        self.boton_reset = tk.Button(root, text="Reiniciar", command=self.reinicio)
+        self.boton_reset.pack(pady=5)
+
+    def sumar_click(self):
+        self.contador += 1
+        self.label_puntos.config(text=f"Clicks: {self.contador}")
+        
+        # Un pequeño "easter egg" al llegar a 10 clicks
+        if self.contador == 10:
+            messagebox.showinfo("¡Genial!", "¡Has alcanzado los 10 clicks!")
+
+    def reinicio(self):
+        self.contador = 0
+        self.label_puntos.config(text=f"Clicks: {self.contador}")
+
+# Configuración de la ventana principal
+if __name__ == "__main__":
+    ventana = tk.Tk()
+    app = ProyectoClicker(ventana)
+    ventana.mainloop()
